@@ -36,6 +36,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Futronic.Scanners.FS26X80">
+      <HintPath>..\Futronic.Scanners.FS26X80\bin\Debug\Futronic.Scanners.FS26X80.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -55,12 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Futronic.Scanners.FS26X80\Futronic.Scanners.FS26X80.csproj">
-      <Project>{4ca2c425-2739-485b-8562-f5ce3fd5366a}</Project>
-      <Name>Futronic.Scanners.FS26X80</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

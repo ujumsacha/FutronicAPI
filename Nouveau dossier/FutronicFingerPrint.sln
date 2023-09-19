@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futronic.ConsoleDemo", "Futronic.ConsoleDemo\Futronic.ConsoleDemo.csproj", "{B8BCBDCF-FC45-43D5-821E-AD30F50EB196}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futronic.ConsoleDemo", "..\Futronic.ConsoleDemo\Futronic.ConsoleDemo.csproj", "{B8BCBDCF-FC45-43D5-821E-AD30F50EB196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futronic.Scanners.FS26X80", "Futronic.Scanners.FS26X80\Futronic.Scanners.FS26X80.csproj", "{4CA2C425-2739-485B-8562-F5CE3FD5366A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futronic.Scanners.FS26X80", "..\Futronic.Scanners.FS26X80\Futronic.Scanners.FS26X80.csproj", "{4CA2C425-2739-485B-8562-F5CE3FD5366A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futronic.Models", "Futronic.Models\Futronic.Models.csproj", "{12113153-DB92-4D07-96B0-3808274A25FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futronic.Models", "..\Futronic.Models\Futronic.Models.csproj", "{12113153-DB92-4D07-96B0-3808274A25FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futronic.Infrastructure", "Futronic.Infrastructure\Futronic.Infrastructure.csproj", "{947DD4FC-7394-4085-B3CD-B56EB750BF3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futronic.Infrastructure", "..\Futronic.Infrastructure\Futronic.Infrastructure.csproj", "{947DD4FC-7394-4085-B3CD-B56EB750BF3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiEnrolement", "ApiEnrolement\ApiEnrolement.csproj", "{2E5AC704-AD14-4C7E-A69E-8AA96A8FFB20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiEnrolement", "..\ApiEnrolement\ApiEnrolement.csproj", "{2E5AC704-AD14-4C7E-A69E-8AA96A8FFB20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application Enrollement", "Application Enrollement\Application Enrollement.csproj", "{7A5A9D99-0FA7-4A28-A920-06E5B922C33C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FutronicFingerPrint", "FutronicFingerPrint\FutronicFingerPrint.csproj", "{B9B45233-E6FD-48EB-872D-E72748F737BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application Enrollement", "..\Application Enrollement\Application Enrollement.csproj", "{7A5A9D99-0FA7-4A28-A920-06E5B922C33C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +21,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17CFBE3E-41BC-4548-B931-56645FF8E2A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CFBE3E-41BC-4548-B931-56645FF8E2A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CFBE3E-41BC-4548-B931-56645FF8E2A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CFBE3E-41BC-4548-B931-56645FF8E2A4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8BCBDCF-FC45-43D5-821E-AD30F50EB196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8BCBDCF-FC45-43D5-821E-AD30F50EB196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8BCBDCF-FC45-43D5-821E-AD30F50EB196}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,10 +49,6 @@ Global
 		{7A5A9D99-0FA7-4A28-A920-06E5B922C33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A5A9D99-0FA7-4A28-A920-06E5B922C33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A5A9D99-0FA7-4A28-A920-06E5B922C33C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B9B45233-E6FD-48EB-872D-E72748F737BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9B45233-E6FD-48EB-872D-E72748F737BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9B45233-E6FD-48EB-872D-E72748F737BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9B45233-E6FD-48EB-872D-E72748F737BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

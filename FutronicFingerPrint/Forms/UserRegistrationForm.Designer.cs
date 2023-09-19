@@ -59,16 +59,28 @@ namespace FutronicFingerPrint.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.picturePassport = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridAttendance = new System.Windows.Forms.DataGridView();
             this.btnUpdateData = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.pictureLittle = new System.Windows.Forms.PictureBox();
+            this.pictureRing = new System.Windows.Forms.PictureBox();
+            this.pictureMiddle = new System.Windows.Forms.PictureBox();
+            this.pictureIndex = new System.Windows.Forms.PictureBox();
+            this.pictureThumb = new System.Windows.Forms.PictureBox();
+            this.btnCaptureLittle = new System.Windows.Forms.Button();
+            this.btnCaptureRing = new System.Windows.Forms.Button();
+            this.btnCaptureMiddle = new System.Windows.Forms.Button();
+            this.btnCaptureIndex = new System.Windows.Forms.Button();
+            this.btnCaptureThumb = new System.Windows.Forms.Button();
+            this.btnDone = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePassport)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAttendance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLittle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMiddle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIndex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureThumb)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -81,14 +93,14 @@ namespace FutronicFingerPrint.Forms
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 201);
+            this.groupBox1.Size = new System.Drawing.Size(773, 201);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Data";
             // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(16, 151);
+            this.txtLastname.Location = new System.Drawing.Point(15, 129);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(284, 23);
             this.txtLastname.TabIndex = 5;
@@ -96,7 +108,7 @@ namespace FutronicFingerPrint.Forms
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(16, 97);
+            this.txtFirstname.Location = new System.Drawing.Point(15, 84);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(284, 23);
             this.txtFirstname.TabIndex = 4;
@@ -105,33 +117,33 @@ namespace FutronicFingerPrint.Forms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 133);
+            this.label3.Location = new System.Drawing.Point(18, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 15);
+            this.label3.Size = new System.Drawing.Size(34, 15);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Last Name";
+            this.label3.Text = "Nom";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 79);
+            this.label2.Location = new System.Drawing.Point(19, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 15);
+            this.label2.Size = new System.Drawing.Size(92, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "First Name";
+            this.label2.Text = "Numero Unique";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 23);
+            this.label1.Location = new System.Drawing.Point(16, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
+            this.label1.Size = new System.Drawing.Size(74, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Username";
+            this.label1.Text = "Numero CNI";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(16, 44);
+            this.txtUsername.Location = new System.Drawing.Point(16, 39);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(284, 23);
             this.txtUsername.TabIndex = 0;
@@ -142,12 +154,13 @@ namespace FutronicFingerPrint.Forms
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.picturePassport);
-            this.groupBox2.Location = new System.Drawing.Point(427, 12);
+            this.groupBox2.Location = new System.Drawing.Point(795, 145);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(361, 201);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Biometric Data";
+            this.groupBox2.Visible = false;
             // 
             // groupBox4
             // 
@@ -176,6 +189,7 @@ namespace FutronicFingerPrint.Forms
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Fingerprints";
+            this.groupBox4.Visible = false;
             // 
             // btnEnrollRight
             // 
@@ -370,29 +384,6 @@ namespace FutronicFingerPrint.Forms
             this.picturePassport.TabStop = false;
             this.picturePassport.DoubleClick += new System.EventHandler(this.picturePassport_DoubleClick);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dataGridAttendance);
-            this.groupBox3.Location = new System.Drawing.Point(12, 254);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(776, 275);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Attndance records";
-            // 
-            // dataGridAttendance
-            // 
-            this.dataGridAttendance.AllowUserToAddRows = false;
-            this.dataGridAttendance.AllowUserToDeleteRows = false;
-            this.dataGridAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridAttendance.Location = new System.Drawing.Point(3, 19);
-            this.dataGridAttendance.Name = "dataGridAttendance";
-            this.dataGridAttendance.ReadOnly = true;
-            this.dataGridAttendance.RowTemplate.Height = 25;
-            this.dataGridAttendance.Size = new System.Drawing.Size(770, 253);
-            this.dataGridAttendance.TabIndex = 0;
-            // 
             // btnUpdateData
             // 
             this.btnUpdateData.Location = new System.Drawing.Point(313, 225);
@@ -413,15 +404,135 @@ namespace FutronicFingerPrint.Forms
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // pictureLittle
+            // 
+            this.pictureLittle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureLittle.Location = new System.Drawing.Point(598, 312);
+            this.pictureLittle.Name = "pictureLittle";
+            this.pictureLittle.Size = new System.Drawing.Size(88, 107);
+            this.pictureLittle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureLittle.TabIndex = 9;
+            this.pictureLittle.TabStop = false;
+            // 
+            // pictureRing
+            // 
+            this.pictureRing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureRing.Location = new System.Drawing.Point(461, 273);
+            this.pictureRing.Name = "pictureRing";
+            this.pictureRing.Size = new System.Drawing.Size(88, 107);
+            this.pictureRing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureRing.TabIndex = 10;
+            this.pictureRing.TabStop = false;
+            // 
+            // pictureMiddle
+            // 
+            this.pictureMiddle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureMiddle.Location = new System.Drawing.Point(331, 254);
+            this.pictureMiddle.Name = "pictureMiddle";
+            this.pictureMiddle.Size = new System.Drawing.Size(88, 107);
+            this.pictureMiddle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureMiddle.TabIndex = 11;
+            this.pictureMiddle.TabStop = false;
+            // 
+            // pictureIndex
+            // 
+            this.pictureIndex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureIndex.Location = new System.Drawing.Point(204, 273);
+            this.pictureIndex.Name = "pictureIndex";
+            this.pictureIndex.Size = new System.Drawing.Size(88, 107);
+            this.pictureIndex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIndex.TabIndex = 12;
+            this.pictureIndex.TabStop = false;
+            // 
+            // pictureThumb
+            // 
+            this.pictureThumb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureThumb.Location = new System.Drawing.Point(76, 340);
+            this.pictureThumb.Name = "pictureThumb";
+            this.pictureThumb.Size = new System.Drawing.Size(88, 107);
+            this.pictureThumb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureThumb.TabIndex = 13;
+            this.pictureThumb.TabStop = false;
+            // 
+            // btnCaptureLittle
+            // 
+            this.btnCaptureLittle.Location = new System.Drawing.Point(606, 421);
+            this.btnCaptureLittle.Name = "btnCaptureLittle";
+            this.btnCaptureLittle.Size = new System.Drawing.Size(75, 23);
+            this.btnCaptureLittle.TabIndex = 19;
+            this.btnCaptureLittle.Text = "Capture";
+            this.btnCaptureLittle.UseVisualStyleBackColor = true;
+            this.btnCaptureLittle.Click += new System.EventHandler(this.btnCaptureLittle_Click);
+            // 
+            // btnCaptureRing
+            // 
+            this.btnCaptureRing.Location = new System.Drawing.Point(467, 381);
+            this.btnCaptureRing.Name = "btnCaptureRing";
+            this.btnCaptureRing.Size = new System.Drawing.Size(75, 23);
+            this.btnCaptureRing.TabIndex = 20;
+            this.btnCaptureRing.Text = "Capture";
+            this.btnCaptureRing.UseVisualStyleBackColor = true;
+            this.btnCaptureRing.Click += new System.EventHandler(this.btnCaptureRing_Click);
+            // 
+            // btnCaptureMiddle
+            // 
+            this.btnCaptureMiddle.Location = new System.Drawing.Point(339, 365);
+            this.btnCaptureMiddle.Name = "btnCaptureMiddle";
+            this.btnCaptureMiddle.Size = new System.Drawing.Size(75, 23);
+            this.btnCaptureMiddle.TabIndex = 21;
+            this.btnCaptureMiddle.Text = "Capture";
+            this.btnCaptureMiddle.UseVisualStyleBackColor = true;
+            this.btnCaptureMiddle.Click += new System.EventHandler(this.btnCaptureMiddle_Click);
+            // 
+            // btnCaptureIndex
+            // 
+            this.btnCaptureIndex.Location = new System.Drawing.Point(209, 382);
+            this.btnCaptureIndex.Name = "btnCaptureIndex";
+            this.btnCaptureIndex.Size = new System.Drawing.Size(75, 23);
+            this.btnCaptureIndex.TabIndex = 22;
+            this.btnCaptureIndex.Text = "Capture";
+            this.btnCaptureIndex.UseVisualStyleBackColor = true;
+            this.btnCaptureIndex.Click += new System.EventHandler(this.btnCaptureIndex_Click);
+            // 
+            // btnCaptureThumb
+            // 
+            this.btnCaptureThumb.Location = new System.Drawing.Point(83, 450);
+            this.btnCaptureThumb.Name = "btnCaptureThumb";
+            this.btnCaptureThumb.Size = new System.Drawing.Size(75, 23);
+            this.btnCaptureThumb.TabIndex = 23;
+            this.btnCaptureThumb.Text = "Capture";
+            this.btnCaptureThumb.UseVisualStyleBackColor = true;
+            this.btnCaptureThumb.Click += new System.EventHandler(this.btnCaptureThumb_Click);
+            // 
+            // btnDone
+            // 
+            this.btnDone.Location = new System.Drawing.Point(344, 473);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(75, 23);
+            this.btnDone.TabIndex = 24;
+            this.btnDone.Text = "Done";
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click_1);
+            // 
             // UserRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 541);
+            this.Controls.Add(this.btnDone);
+            this.Controls.Add(this.btnCaptureLittle);
+            this.Controls.Add(this.pictureLittle);
+            this.Controls.Add(this.btnCaptureRing);
+            this.Controls.Add(this.pictureRing);
+            this.Controls.Add(this.btnCaptureMiddle);
+            this.Controls.Add(this.btnCaptureIndex);
+            this.Controls.Add(this.pictureMiddle);
+            this.Controls.Add(this.btnCaptureThumb);
+            this.Controls.Add(this.pictureIndex);
+            this.Controls.Add(this.pictureThumb);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnUpdateData);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UserRegistrationForm";
@@ -434,8 +545,11 @@ namespace FutronicFingerPrint.Forms
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePassport)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAttendance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLittle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMiddle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIndex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureThumb)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,8 +558,6 @@ namespace FutronicFingerPrint.Forms
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridAttendance;
         private System.Windows.Forms.TextBox txtLastname;
         private System.Windows.Forms.TextBox txtFirstname;
         private System.Windows.Forms.Label label3;
@@ -476,5 +588,16 @@ namespace FutronicFingerPrint.Forms
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.Button btnUpdateData;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.PictureBox pictureLittle;
+        private System.Windows.Forms.PictureBox pictureRing;
+        private System.Windows.Forms.PictureBox pictureMiddle;
+        private System.Windows.Forms.PictureBox pictureIndex;
+        private System.Windows.Forms.PictureBox pictureThumb;
+        private System.Windows.Forms.Button btnCaptureLittle;
+        private System.Windows.Forms.Button btnCaptureRing;
+        private System.Windows.Forms.Button btnCaptureMiddle;
+        private System.Windows.Forms.Button btnCaptureIndex;
+        private System.Windows.Forms.Button btnCaptureThumb;
+        private System.Windows.Forms.Button btnDone;
     }
 }

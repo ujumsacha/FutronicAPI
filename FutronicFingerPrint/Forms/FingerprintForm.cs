@@ -1,4 +1,4 @@
-﻿using Futronic.Infrastructure.Services;
+﻿//using Futronic.Infrastructure.Services;
 using Futronic.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Futronic.Scanners.FS26X80;
 namespace FutronicFingerPrint.Forms
 {
     [Serializable]
@@ -28,7 +28,7 @@ namespace FutronicFingerPrint.Forms
         [DataMember]
         private byte[] LittleFinger;
 
-        private IRepository<long, User> _repository;
+        //private IRepository<long, User> _repository;
 
         public FingerprintForm()
         {
@@ -37,37 +37,86 @@ namespace FutronicFingerPrint.Forms
 
         private void FingerprintForm_Load(object sender, EventArgs e)
         {
-            var repository = Activator.CreateInstance(typeof(IRepository<long, User>)) as IRepository<long, User>;
-            _repository = repository;
+            //var repository = Activator.CreateInstance(typeof(IRepository<long, User>)) as IRepository<long, User>;
+            //_repository = repository;
         }
-
+        
         private void btnCaptureThumb_Click(object sender, EventArgs e)
         {
-            pictureThumb.Image = picturePreview.Image;
-            this.Thumb = GetImageBytes(this.pictureThumb.Image);
+            var accessor = new DeviceAccessor();
+
+            using (var device = accessor.AccessFingerprintDevice())
+            {
+                device.SwitchLedState(true, false);
+                //device.StartFingerDetection();
+                Bitmap ber = device.ReadFingerprint();
+                this.pictureThumb.Image = ber;
+                device.SwitchLedState(false, false);
+            }
+            //pictureThumb.Image = picturePreview.Image;
+            //this.Thumb = GetImageBytes(this.pictureThumb.Image);
         }
 
         private void btnCaptureIndex_Click(object sender, EventArgs e)
         {
-            pictureIndex.Image = picturePreview.Image;
-            this.IndexFinger = GetImageBytes(this.pictureIndex.Image);
+            var accessor = new DeviceAccessor();
+
+            using (var device = accessor.AccessFingerprintDevice())
+            {
+                device.SwitchLedState(true, false);
+                //device.StartFingerDetection();
+                Bitmap ber=  device.ReadFingerprint();
+                this.pictureIndex.Image = ber;
+                device.SwitchLedState(false, false);
+            }
+            
         }
 
         private void btnCaptureMiddle_Click(object sender, EventArgs e)
         {
-            pictureMiddle.Image = picturePreview.Image;
-            this.MiddleFinger = GetImageBytes(this.pictureMiddle.Image);
+            var accessor = new DeviceAccessor();
+
+            using (var device = accessor.AccessFingerprintDevice())
+            {
+                device.SwitchLedState(true, false);
+                //device.StartFingerDetection();
+                Bitmap ber = device.ReadFingerprint();
+                this.pictureMiddle.Image = ber;
+                device.SwitchLedState(false, false);
+            }
+            //pictureMiddle.Image = picturePreview.Image;
+            //this.MiddleFinger = GetImageBytes(this.pictureMiddle.Image);
         }
 
         private void btnCaptureRing_Click(object sender, EventArgs e)
         {
-            pictureRing.Image = picturePreview.Image;
-            this.RingFinger = GetImageBytes(this.pictureRing.Image);
+            var accessor = new DeviceAccessor();
+
+            using (var device = accessor.AccessFingerprintDevice())
+            {
+                device.SwitchLedState(true, false);
+                //device.StartFingerDetection();
+                Bitmap ber = device.ReadFingerprint();
+                this.pictureRing.Image = ber;
+                device.SwitchLedState(false, false);
+            }
+            //pictureRing.Image = picturePreview.Image;
+            //this.RingFinger = GetImageBytes(this.pictureRing.Image);
         }
 
         private void btnCaptureLittle_Click(object sender, EventArgs e)
         {
-            pictureLittle.Image = picturePreview.Image;
+            var accessor = new DeviceAccessor();
+
+            using (var device = accessor.AccessFingerprintDevice())
+            {
+                device.SwitchLedState(true, false);
+                //device.StartFingerDetection();
+                Bitmap ber = device.ReadFingerprint();
+                this.pictureLittle.Image = ber;
+                device.SwitchLedState(false, false);
+            }
+            //pictureLittle.Image = picturePreview.Image;
             this.LittleFinger = GetImageBytes(this.pictureLittle.Image);
         }
 

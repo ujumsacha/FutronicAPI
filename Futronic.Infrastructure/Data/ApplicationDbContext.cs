@@ -11,7 +11,7 @@ namespace Futronic.Infrastructure.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext() : base("Server=(localdb)\\mssqllocaldb;Database=FutronicFingerprint;Trusted_Connection=True;MultipleActiveResultSets=true")
+        public ApplicationDbContext() : base("Data Source=172.10.10.35/MSSQLSERVER;Initial Catalog = DatabaseEnrollement; User ID = sa; Password=Admin@@2020")
         {
 
         }

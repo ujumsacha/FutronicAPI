@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Futronic.Scanners.FS26X80;
 
+
 namespace Futronic.ConsoleDemo
 {
     class Program
