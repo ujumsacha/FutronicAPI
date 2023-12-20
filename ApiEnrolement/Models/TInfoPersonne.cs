@@ -15,8 +15,6 @@ public partial class TInfoPersonne
 
     public string RPrenom { get; set; } = null!;
 
-    public DateTime[]? RDateNaissance { get; set; }
-
     public string? RSexe { get; set; }
 
     public int? RTaille { get; set; }
@@ -25,13 +23,13 @@ public partial class TInfoPersonne
 
     public string? RLieuDeNaissance { get; set; }
 
-    public DateTime? RDateDExpiration { get; set; }
+    public DateOnly? RDateDExpiration { get; set; }
 
     public string? RNni { get; set; }
 
     public string? RProfession { get; set; }
 
-    public DateTime? RDateEmission { get; set; }
+    public DateOnly? RDateEmission { get; set; }
 
     public string? RLieuEmission { get; set; }
 
@@ -46,6 +44,8 @@ public partial class TInfoPersonne
     public bool RIsLock { get; set; }
 
     public string? RDescriptionLock { get; set; }
+
+    public DateOnly? RDateNaissance { get; set; }
 
     public virtual ICollection<TEmpreinte> TEmpreintes { get; set; } = new List<TEmpreinte>();
 }

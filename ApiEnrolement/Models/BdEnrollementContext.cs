@@ -21,7 +21,7 @@ public partial class BdEnrollementContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=172.10.10.103;Port=5434;Database=Bd_enrollement;Username=vitbank;Password=vitbank");
+        => optionsBuilder.UseNpgsql("Host=172.10.10.103;port=5434;Database=Bd_enrollement;Username=vitbank;Password=vitbank");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -29,10 +29,11 @@ public partial class BdEnrollementContext : DbContext
         {
             entity.HasKey(e => e.RId).HasName("primarykey_constraint");
 
-            entity.ToTable("t_Empreinte", "Sc_enrollement");
+            entity.ToTable("t_empreinte", "sc_enrollement");
 
             entity.Property(e => e.RId)
-                .ValueGeneratedNever()
+                .UseIdentityAlwaysColumn()
+                .HasIdentityOptions(null, null, null, 9999999999999L, null, null)
                 .HasColumnName("r_id");
             entity.Property(e => e.RCreatedBy)
                 .HasMaxLength(50)
@@ -44,7 +45,7 @@ public partial class BdEnrollementContext : DbContext
                 .HasMaxLength(50)
                 .HasColumnName("r_id_personne_fk");
             entity.Property(e => e.RLien)
-                .HasMaxLength(100)
+                .HasMaxLength(500)
                 .HasColumnName("r_lien");
             entity.Property(e => e.RType)
                 .HasMaxLength(15)
@@ -61,7 +62,7 @@ public partial class BdEnrollementContext : DbContext
         {
             entity.HasKey(e => e.RId).HasName("t_Info_personne_pkey");
 
-            entity.ToTable("t_Info_personne", "Sc_enrollement");
+            entity.ToTable("t_info_personne", "sc_enrollement");
 
             entity.Property(e => e.RId)
                 .HasMaxLength(50)
@@ -70,15 +71,9 @@ public partial class BdEnrollementContext : DbContext
                 .HasMaxLength(50)
                 .HasColumnName("r_created_by");
             entity.Property(e => e.RCreatedOn).HasColumnName("r_created_on");
-            entity.Property(e => e.RDateDExpiration)
-                .HasColumnType("timestamp without time zone")
-                .HasColumnName("r_date_d'expiration");
-            entity.Property(e => e.RDateEmission)
-                .HasColumnType("timestamp without time zone")
-                .HasColumnName("r_date_emission");
-            entity.Property(e => e.RDateNaissance)
-                .HasColumnType("timestamp without time zone[]")
-                .HasColumnName("r_date_naissance");
+            entity.Property(e => e.RDateDExpiration).HasColumnName("r_date_d'expiration");
+            entity.Property(e => e.RDateEmission).HasColumnName("r_date_emission");
+            entity.Property(e => e.RDateNaissance).HasColumnName("r_date_naissance");
             entity.Property(e => e.RDescriptionLock)
                 .HasMaxLength(200)
                 .HasColumnName("r_description_lock");
@@ -100,7 +95,7 @@ public partial class BdEnrollementContext : DbContext
                 .HasColumnName("r_nom");
             entity.Property(e => e.RNumCni)
                 .HasMaxLength(13)
-                .HasColumnName("r_num_Cni");
+                .HasColumnName("r_num_cni");
             entity.Property(e => e.RNumUnique)
                 .HasMaxLength(50)
                 .HasColumnName("r_num_unique");

@@ -19,4 +19,10 @@
 	<PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="ftrSDKHelper13">
+      <HintPath>E:\Futronic\FutronicFingerPrint\bin\Debug\net5.0-windows\ftrSDKHelper13.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
